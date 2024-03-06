@@ -19,19 +19,19 @@ function Experience(){
             <Card
                 direction={{ base: 'column', sm: 'row' }}
                 overflow='hidden'
-                variant='filled'
-                colorScheme="red"
+                variant='elevated'
                 >
-                <Image
-                    objectFit='cover'
-                    maxW={{ base: '100%', sm: '10%' }}
-                    maxH={{base: '100%', sm:'70%'}}
-                    src={Scotiabank_logo}
-                />
-
+                <Center>
+                    <Image
+                        objectFit='cover'
+                        maxW={{ base: '100%', sm: '70%' }}
+                        maxH={{base: '100%', sm:'70%'}}
+                        src={Scotiabank_logo}
+                    />
+                </Center>
                 <Stack>
                     <CardBody>
-                    <Heading size='md'>Software Engineer - Intern</Heading>
+                    <Heading as='b' size='md' color='white'>Software Engineer - Intern</Heading>
                         <UnorderedList>
                             <ListItem>Customized ServiceNow Service Catalog forms and tables</ListItem>
                             <ListItem>Reverse-engineered notification generating script and presented the findings to 40+ ServiceNow 
@@ -50,15 +50,16 @@ function Experience(){
             <Card
                 direction={{ base: 'column', sm: 'row' }}
                 overflow='hidden'
-                variant='outline'
+                variant='elevated'
                 >
-                <Image
+                <Center>
+                    <Image
                     objectFit='cover'
-                    maxW={{ base: '100%', sm: '10%' }}
+                    maxW={{ base: '100%', sm: '70%' }}
                     maxH={{base: '100%', sm:'70%'}}
                     src={x23e2_Logo}
                 />
-
+                </Center>
                 <Stack>
                     <CardBody>
                     <Heading size='md'>Full Stack Developer</Heading>
@@ -79,14 +80,18 @@ function Experience(){
             <Card
                 direction={{ base: 'column', sm: 'row' }}
                 overflow='hidden'
-                variant='outline'
+                variant='elevated'
                 >
+                <Center>
+                
                 <Image
                     objectFit='cover'
-                    maxW={{ base: '100%', sm: '10%' }}
+                    maxW={{ base: '100%', sm: '70%' }}
                     maxH={{base: '100%', sm:'70%'}}
                     src={Etisalat_Logo}
                 />
+                    
+                </Center>
 
                 <Stack>
                     <CardBody>

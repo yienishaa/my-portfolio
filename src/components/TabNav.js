@@ -2,9 +2,10 @@ import { Tabs, TabList, TabPanels, Tab, TabPanel, TabIndicator } from '@chakra-u
 import About from './About';
 import Experience from './Experience';
 
+
 function TabNav(){
     return(
-        <Tabs isFitted position="relative"  variant="unstyled" >
+        <Tabs isFitted position="relative"  size="xl" variant="colorful" colorScheme='black' >
             <TabList>
                 <Tab>About</Tab>
                 <Tab>Experience</Tab>
