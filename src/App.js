@@ -1,13 +1,13 @@
 import React from 'react';
 import {ChakraProvider,Box} from '@chakra-ui/react';
-import TabNav from './components/TabNav';
+import About from './components/About'
 import theme from './CustomTheme'
 
 
 function App() {
   return (
     <ChakraProvider theme={theme} >
-      <TabNav />
+      <About />
     </ChakraProvider>
   );
 }
