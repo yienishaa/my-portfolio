@@ -1,55 +1,49 @@
-import { Container, AbsoluteCenter, CardBody, GridItem, Center,Text,Box, Grid, Image, Heading, HStack} from '@chakra-ui/react'
-import "@fontsource/yeseva-one"; 
-import styled from "styled-components"; 
-import { SkipNavLink, SkipNavContent } from '@chakra-ui/skip-nav'
-import { Button, ButtonGroup } from '@chakra-ui/react'
-import { ChevronDownIcon } from '@chakra-ui/icons'
+import { useRef} from 'react';
+import {Container, Text, Center, VStack} from '@chakra-ui/react'
+import { gsap } from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+import { useGSAP } from '@gsap/react';
 
-const StyledText = styled.h1` 
-    font-family: "Yeseva One", sans-serif; 
-    font-size: 30px; 
-`;
-
-const StyledText2 = styled.h1` 
-    font-family: "Signika Negative", sans-serif; 
-    font-size: 30px; 
-`;
-
+gsap.registerPlugin(useGSAP, ScrollTrigger);
 
 function About(){
-    return(
-        <Grid templateAreas={`"About About"
-                            "Button Button"`}
-                gridTemplateRows={'80vh 1fr 20vh'}
-                gridTemplateColumns={'150px 1fr'}>
-            <GridItem area={'About'}>
-                <AbsoluteCenter w='90%'>
-                <Heading fontFamily='Yeseva One'>
-                    <HStack >
-                        <Text fontSize='6xl' color='gray.600' >Hi, I'm </Text>
-                        <Text fontSize='6xl' >&#60;&#47;Yienisha Abeyratne&#62;</Text>
-                    </HStack>
-                </Heading>
-        
-                <Text fontSize='2xl' color='white' w='100%'>a 3rd year CS student at York University.</Text>
-    
-                <HStack>
-                    <Text fontSize='2xl' color='gray.600'>I’m passionate about</Text>
-                    <Text fontSize='2xl'>Software Development, </Text>
-                </HStack>
-        
-                <Text fontSize='2xl'>Data Science & Back End Development.</Text>
-                </AbsoluteCenter>
-            </GridItem>
-           
-            <GridItem area={'Button'}>
-            <Center>
-                <Button borderRadius='30' color='gray.600' rightIcon={<ChevronDownIcon />} colorScheme='teal' variant='outline'>MY BEST WORK</Button>
-            </Center>   
-            </GridItem>
+    const main = useRef();
+
+    useGSAP(
+        () => {
+            const texts = gsap.utils.toArray('.head');
+            texts.forEach((head) => {
+                gsap.to(head, {
+                  x: '20%',
+                  scrollTrigger: {
+                    trigger: head,
+                    start: 'bottom right',
+                    end: 'top 30%',
+                    scrub: true,
+                   // markers: true,
+                  },
+                });
+              });
             
-        </Grid>
-        
+        }, {scope:main}
     );
+
+    return(
+        <Center height='100vh'  ref={main}>
+            <VStack>
+            <Container size='md'>
+                <Text className='head' fontSize='6xl' color='gray.600' >About Me</Text>
+            </Container>
+            <Container size='md'>
+                <Text className='head' fontSize='xl' >
+                I have over 10 years of experience designing the user interface and user experience of dozens of 
+                today's top websites and apps. 
+                I am passionate about bold but intuitive design, and doing work for companies with social responsibility.
+                </Text>
+            </Container>
+            </VStack>
+            </Center> 
+    );
+
 }
 export default About;
