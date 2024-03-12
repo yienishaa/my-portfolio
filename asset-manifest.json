@@ -1,0 +1,26 @@
+{
+  "files": {
+    "main.css": "/my-portfolio/static/css/main.fe3a51ba.css",
+    "main.js": "/my-portfolio/static/js/main.dfafbb2c.js",
+    "static/js/453.ed3810f9.chunk.js": "/my-portfolio/static/js/453.ed3810f9.chunk.js",
+    "static/media/scotia.jpg": "/my-portfolio/static/media/scotia.d3fbaf94f4c67c453db3.jpg",
+    "static/media/yeseva-one-latin-400-normal.woff2": "/my-portfolio/static/media/yeseva-one-latin-400-normal.19bbef80a0d9d3d98a12.woff2",
+    "static/media/yeseva-one-latin-400-normal.woff": "/my-portfolio/static/media/yeseva-one-latin-400-normal.003e926352d09034a7bb.woff",
+    "static/media/yeseva-one-latin-ext-400-normal.woff2": "/my-portfolio/static/media/yeseva-one-latin-ext-400-normal.3cfcd68b90e7900e3cba.woff2",
+    "static/media/yeseva-one-cyrillic-400-normal.woff2": "/my-portfolio/static/media/yeseva-one-cyrillic-400-normal.9649b2e40b5df359f81d.woff2",
+    "static/media/yeseva-one-latin-ext-400-normal.woff": "/my-portfolio/static/media/yeseva-one-latin-ext-400-normal.0a97abccb5470689d7d4.woff",
+    "static/media/yeseva-one-cyrillic-ext-400-normal.woff2": "/my-portfolio/static/media/yeseva-one-cyrillic-ext-400-normal.402669af1de8d6b1dc1f.woff2",
+    "static/media/yeseva-one-cyrillic-400-normal.woff": "/my-portfolio/static/media/yeseva-one-cyrillic-400-normal.0005490354513bb77e2b.woff",
+    "static/media/yeseva-one-cyrillic-ext-400-normal.woff": "/my-portfolio/static/media/yeseva-one-cyrillic-ext-400-normal.83dcd8294f75456c39ab.woff",
+    "static/media/yeseva-one-vietnamese-400-normal.woff2": "/my-portfolio/static/media/yeseva-one-vietnamese-400-normal.b3b16c387a15f2172f37.woff2",
+    "static/media/yeseva-one-vietnamese-400-normal.woff": "/my-portfolio/static/media/yeseva-one-vietnamese-400-normal.01390f6cefac51b10978.woff",
+    "index.html": "/my-portfolio/index.html",
+    "main.fe3a51ba.css.map": "/my-portfolio/static/css/main.fe3a51ba.css.map",
+    "main.dfafbb2c.js.map": "/my-portfolio/static/js/main.dfafbb2c.js.map",
+    "453.ed3810f9.chunk.js.map": "/my-portfolio/static/js/453.ed3810f9.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.fe3a51ba.css",
+    "static/js/main.dfafbb2c.js"
+  ]
+}
