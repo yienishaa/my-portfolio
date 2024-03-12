@@ -1,5 +1,5 @@
 import { useRef} from 'react';
-import {Container, Text, Center, VStack} from '@chakra-ui/react'
+import {Container, Text, Center, Stack} from '@chakra-ui/react'
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { useGSAP } from '@gsap/react';
@@ -30,7 +30,7 @@ function About(){
 
     return(
         <Center height='100vh'  ref={main}>
-            <VStack>
+            <Stack>
             <Container size='md'>
                 <Text className='head' fontSize='6xl' color='gray.600' >About Me</Text>
             </Container>
@@ -41,7 +41,7 @@ function About(){
                 I am passionate about bold but intuitive design, and doing work for companies with social responsibility.
                 </Text>
             </Container>
-            </VStack>
+            </Stack>
             </Center> 
     );
 

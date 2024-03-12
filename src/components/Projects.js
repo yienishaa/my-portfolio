@@ -1,5 +1,5 @@
 import { useRef} from 'react';
-import {  Container, GridItem, Center,Text, Grid, Image, Box} from '@chakra-ui/react'
+import {  Container, VStack, Center,Text, Stack, Image, Box} from '@chakra-ui/react'
 import "@fontsource/yeseva-one"; 
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
@@ -34,45 +34,40 @@ function Projects(){
 
 
     return(
-        
-        <Container h='100vh' size='lg' ref={project}>
-            <Center>
-        <Grid templateRows='repeat(2, 1fr)'
-                templateColumns='repeat(3, 1fr)'
-                gap={5}
-                w='100%'
-                h='100%'
-            >
-            <GridItem  rowSpan={1} colSpan={3}>
-                <Text fontFamily='Yeseva One' fontSize='6xl' >Projects</Text>
-            </GridItem>
-            
-            <GridItem rowSpan={1} colSpan={1}>
-            <Text color='gray.800'>Scotiabank</Text>
-                <Box bgGradient='linear(to-br,  gray.600 40%,   pink.600 100% )'>
-                    <Image opacity={0.3} src={img1}  />
-                    <Text  color='white' transform='translate(2%,-100%)'>Software Engineer - Intern</Text>
-                </Box>
-            </GridItem>
-            <GridItem rowSpan={1} colSpan={1}>
-            <Text color='gray.800'>Scotiabank</Text>
-                <Box  bgGradient='linear(to-b,  gray.600 40%, pink.600 60%)'>
-                    <Image opacity={0.3} src={img1} />
-                    <Text color='white' transform='translate(2%,-100%)'>Full Stack Developer</Text>
-                </Box>
-            </GridItem>
-            <GridItem rowSpan={1} colSpan={1}>
-            <Text color='gray.800'>Scotiabank</Text>
-                <Box  bgGradient='linear(to-bl, gray.600 40%, pink.600 60%)'>
-                    <Image opacity={0.3} src={img1} />
-                    <Text  color='white' transform='translate(2%,-100%)'>Core Network Engineer</Text>
-                </Box>
-            </GridItem>
-            
-            </Grid>
-            </Center>
+        <Container size='lg' h='120vh'>
+        <Center >
+            <Container  size='lg' ref={project}>
+                <Text fontFamily='Yeseva One' fontSize='5xl' >Projects</Text>
+                
+                <Stack direction={['column', 'row']}>
+                    <VStack>
+                        <Box bgGradient='linear(to-br,  gray.600 40%, pink.600 60%)' position='relative' >
+                            <Image  opacity={0.3} src={img1}  />
+                            <Box position='absolute' left='0'  bottom='0'>
+                                <Text  color='white'  >E-Commerce Website</Text>
+                            </Box>
+                        </Box>
+                    </VStack>
+                    <VStack>
+                        <Box bgGradient='linear(to-b,  gray.600 40%, pink.600 60%)' position='relative' >
+                            <Image  opacity={0.3} src={img1}  />
+                            <Box position='absolute' left='0'  bottom='0'>
+                                <Text  color='white'  >Bill-Shock Preventer</Text>
+                            </Box>
+                        </Box>
+                    </VStack>
+                    <VStack>
+                        <Box bgGradient='linear(to-bl,  gray.600 40%, pink.600 60%)' position='relative' >
+                            <Image  opacity={0.3} src={img1}  />
+                            <Box position='absolute' left='0'  bottom='0'>
+                                <Text  color='white'  >Lost-Roamer Heat Map</Text>
+                            </Box>
+                        </Box>
+                    </VStack>
+                </Stack>
             </Container>
-            
+        </Center>
+        </Container>
 
     );
 }
