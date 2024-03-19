@@ -1,5 +1,5 @@
 import { useRef} from 'react';
-import {  Container, VStack, Center,Text, Stack, Image, Box} from '@chakra-ui/react'
+import {  Container, VStack, Center,Text, Stack, Image, Box, LinkBox, LinkOverlay} from '@chakra-ui/react'
 import "@fontsource/yeseva-one"; 
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
@@ -34,35 +34,64 @@ function Projects(){
 
 
     return(
-        <Container size='lg' h='120vh'>
+        <Container size='lg' h='150vh'>
         <Center >
             <Container  size='lg' ref={project}>
-                <Text fontFamily='Yeseva One' fontSize='5xl' >Projects</Text>
+                <Text color='textBrand.100' fontFamily='Yeseva One' fontSize='5xl' >Projects</Text>
                 
-                <Stack direction={['column', 'row']}>
-                    <VStack>
-                        <Box bgGradient='linear(to-br,  gray.600 40%, pink.600 60%)' position='relative' >
+                <Stack direction={['column', 'row']} spacing={10}>
+                    <VStack >
+                    <LinkBox as='article' >
+                    <LinkOverlay href='#'>
+                        <Box bgGradient='linear(to-br,  brand.500 , brand.400 )' position='relative' >
                             <Image  opacity={0.3} src={img1}  />
                             <Box position='absolute' left='0'  bottom='0'>
-                                <Text  color='white'  >E-Commerce Website</Text>
+                            
+                                <Text color='textBrand.100' pl='3'>E-Commerce Website</Text>
+                               
                             </Box>
                         </Box>
+                        </LinkOverlay>
+                        </LinkBox>
+                    </VStack>
+                    <VStack >
+                    <LinkBox as='article' >
+                    <LinkOverlay href='#'>
+                        <Box bgGradient='linear(to-bl,  brand.500 , brand.400 )' position='relative' >
+                            <Image  opacity={0.3} src={img1}  />
+                            <Box position='absolute' left='0'  bottom='0'>
+                                <Text  color='textBrand.100' pl='3' >Bill-Shock Preventer</Text>
+                            </Box>
+                        </Box>
+                        </LinkOverlay>
+                        </LinkBox>
+                    </VStack>
+                </Stack>
+                <Container size='lg'/>
+                <Stack direction={['column', 'row']} spacing={[10]}>
+                    <VStack>
+                    <LinkBox as='article' >
+                    <LinkOverlay href='#'>
+                        <Box bgGradient='linear(to-tr,  brand.500 , brand.400 )' position='relative' >
+                            <Image  opacity={0.3} src={img1}  />
+                            <Box position='absolute' left='0'  bottom='0'>
+                                <Text  color='textBrand.100' pl='3' >Lost-Roamer Heat Map</Text>
+                            </Box>
+                        </Box>
+                        </LinkOverlay>
+                        </LinkBox>
                     </VStack>
                     <VStack>
-                        <Box bgGradient='linear(to-b,  gray.600 40%, pink.600 60%)' position='relative' >
+                    <LinkBox as='article' >
+                    <LinkOverlay href='#'>
+                        <Box bgGradient='linear(to-tl,  brand.500 , brand.400 )' position='relative' >
                             <Image  opacity={0.3} src={img1}  />
                             <Box position='absolute' left='0'  bottom='0'>
-                                <Text  color='white'  >Bill-Shock Preventer</Text>
+                                <Text  color='textBrand.100' pl='3' >Lost-Roamer Heat Map</Text>
                             </Box>
                         </Box>
-                    </VStack>
-                    <VStack>
-                        <Box bgGradient='linear(to-bl,  gray.600 40%, pink.600 60%)' position='relative' >
-                            <Image  opacity={0.3} src={img1}  />
-                            <Box position='absolute' left='0'  bottom='0'>
-                                <Text  color='white'  >Lost-Roamer Heat Map</Text>
-                            </Box>
-                        </Box>
+                        </LinkOverlay>
+                        </LinkBox>
                     </VStack>
                 </Stack>
             </Container>

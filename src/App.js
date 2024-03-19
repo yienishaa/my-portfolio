@@ -6,6 +6,7 @@ import About from './components/About';
 import Experience from './components/Experience';
 import Projects from './components/Projects';
 import Contact from './components/Contact'
+import ProjectDescription from './components/Project-Description';
 
 
 function App() {
@@ -16,6 +17,7 @@ function App() {
       <Experience/>
       <Projects/>
       <Contact/>
+      <ProjectDescription/>
     </ChakraProvider>
   );
 }

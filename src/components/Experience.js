@@ -1,5 +1,5 @@
 import { useRef} from 'react';
-import {  Container, VStack, Center,Text, Stack, Image, Box} from '@chakra-ui/react'
+import {  Container, VStack, Center,Text, Stack, Image, Box, Heading} from '@chakra-ui/react'
 import "@fontsource/yeseva-one"; 
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
@@ -38,12 +38,12 @@ function Experience(){
         <Container size='lg' h='120vh'>
         <Center >
             <Container  size='lg' ref={experi}>
-                <Text fontFamily='Yeseva One' fontSize='5xl' >Experience</Text>
+                <Heading variant='custom'>Experience</Heading>
                 
                 <Stack direction={['column', 'row']}>
                     <VStack>
                         <Text color='gray.800'>Scotiabank</Text>
-                        <Box bgGradient='linear(to-br,  gray.600 40%, pink.600 60%)' position='relative' >
+                        <Box bgGradient='linear(to-br,  gray.500 , brand.100 )' position='relative' >
                             <Image  opacity={0.3} src={img1}  />
                             <Box position='absolute' left='0'  bottom='0'>
                                 <Text  color='white'  >Software Engineer - Intern</Text>
@@ -52,7 +52,7 @@ function Experience(){
                     </VStack>
                     <VStack>
                         <Text color='gray.800'>23e2 Digital Marketing</Text>
-                        <Box bgGradient='linear(to-b,  gray.600 40%, pink.600 60%)' position='relative' >
+                        <Box bgGradient='linear(to-b,  gray.500 , brand.100 )' position='relative' >
                             <Image  opacity={0.3} src={img1}  />
                             <Box position='absolute' left='0'  bottom='0'>
                                 <Text  color='white'  >Full Stack Developer</Text>
@@ -61,7 +61,7 @@ function Experience(){
                     </VStack>
                     <VStack>
                         <Text color='gray.800'>Etisalat Lanka Pvt. Ltd</Text>
-                        <Box bgGradient='linear(to-bl,  gray.600 40%, pink.600 60%)' position='relative' >
+                        <Box bgGradient='linear(to-bl,  gray.500 , brand.100 )' position='relative' >
                             <Image  opacity={0.3} src={img1}  />
                             <Box position='absolute' left='0'  bottom='0'>
                                 <Text  color='white'  >Core Network Engineer</Text>
