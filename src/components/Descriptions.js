@@ -3,43 +3,26 @@ import {  Container, VStack, Center,Text, Stack, Image, Box, Heading} from '@cha
 import "@fontsource/yeseva-one"; 
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
-import { useGSAP } from '@gsap/react';
 import img1 from './scotia.jpg'
-import { Card, CardHeader, CardBody, CardFooter } from '@chakra-ui/react'
+import { useBoolean } from '@chakra-ui/react'
+import React, { useState } from 'react';
 
 
-gsap.registerPlugin(useGSAP, ScrollTrigger);
 
-function Experience(){
+function Descriptions(){
 
-    const experi = useRef();
+    const [overview, setOverview] = useState();
 
-    /*useGSAP(
-        () => {
-            const texts = gsap.utils.toArray('.head');
-            texts.forEach((head) => {
-                gsap.to(head, {
-                  x: '20%',
-                  scrollTrigger: {
-                    trigger: head,
-                    start: 'bottom right',
-                    end: 'top 30%',
-                    scrub: true,
-                   // markers: true,
-                  },
-                });
-              });
-            
-        }, {scope:experi}
-    );*/
+    function displayText(){
+        setOverview('sssssssss')
+    }
 
 
     return(
         <Container size='lg' h='120vh'>
         <Center >
-            <Container  size='lg' ref={experi}>
+            <Container  size='lg' >
                 <Heading variant='custom'>Experience</Heading>
-                
                 <Stack direction={['column', 'row']}>
                     <VStack>
                         <Text color='gray.800'>Scotiabank</Text>
@@ -47,6 +30,11 @@ function Experience(){
                             <Image  opacity={0.3} src={img1}  />
                             <Box position='absolute' left='0'  bottom='0'>
                                 <Text  color='white'  >Software Engineer - Intern</Text>
+                                <p>Boolean state: {overview}</p>
+                                <button onClick={() =>{
+                                    displayText();
+                                }}>Click me to toggle the boolean value
+                                </button>
                             </Box>
                         </Box>
                     </VStack>
@@ -75,4 +63,4 @@ function Experience(){
 
     );
 }
-export default Experience;
+export default Descriptions;

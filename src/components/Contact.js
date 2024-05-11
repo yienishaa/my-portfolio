@@ -39,7 +39,7 @@ function Contact(){
 
     const contacts = useRef();
 
-    useGSAP(
+    /*useGSAP(
         () => {
             const texts = gsap.utils.toArray('.head');
             texts.forEach((head) => {
@@ -56,65 +56,65 @@ function Contact(){
               });
             
         }, {scope:contacts}
-    );
+    );*/
 
     return(
-        <Container size='lg'>
-        <Grid templateAreas={`"title bl bl"
-                  "title email home"
-                  "title phone about"
-                  "title linkedin projects"
-                  "title github experience"
-                  "title resume cc"`} h='200px'>
+        <Container size='lg' color='textBrand.100'>
+        <Grid color='textBrand.100'
+                templateColumns='repeat(2, 1fr)'
+                rowGap={5}
+                columnGap={10}>
             
-            <GridItem area={'title'} >
-                <Center>
-                    <Text   fontFamily='Yeseva One' fontSize='6xl'>Get In Touch</Text>
-                </Center>
+            <GridItem colSpan={2}>
+                <Text   fontFamily='Yeseva One' fontSize='6xl'>Get In Touch</Text>
             </GridItem>
             
-            <GridItem area={'email'}>
+            <GridItem>
                 <Text><EmailIcon/> yienisha.abeyratne@gmail.com</Text>
             </GridItem>
-            <GridItem area={'phone'}>
+            <GridItem>
+                    <Link href='#' isExternal>Home</Link>
+            </GridItem>
+            <GridItem>
                     <Text><PhoneIcon/> +1(437)237-3254</Text>
             </GridItem>
-            <GridItem area={'linkedin'} >
-                <Link href='https://www.linkedin.com/in/yienisha-abeyratne/' isExternal>
+            <GridItem>
+                    <Link href='#' isExternal>About</Link>
+            </GridItem>
+            <GridItem>
+                <Link href='https://www.linkedin.com/in/yienisha/' isExternal>
                     <HStack>
                         <FaLinkedin/>
-                        <Text>LinkedIn</Text>
+                        <Text>linkedin.com/in/yienisha/</Text>
                     </HStack>
                 </Link>
             </GridItem>
-            <GridItem area={'github'}>
+            <GridItem>
+                    <Link href='#' isExternal>Projects</Link>
+            </GridItem>
+            <GridItem>
                     <Link href='https://github.com/yienishaa/' isExternal>
                         <HStack>
                             <FaGithub/>
-                            <Text>GitHub</Text>
+                            <Text>github.com/yienishaa</Text>
                         </HStack>
                     </Link>
                 
             </GridItem>
-            <GridItem area={'resume'}>
+            <GridItem>
+                    <Link href='#' isExternal>Experience</Link>
+            </GridItem>
+            <GridItem>
                     <Link href={resumepdf} isExternal>
                     <HStack>
                         <FaExternalLinkAlt/><Text>Resume</Text>
                         </HStack>
                     </Link>
             </GridItem>
-            <GridItem area={'home'}>
-                    <Link href='#' isExternal>Home</Link>
-            </GridItem>
-            <GridItem area={'about'}>
-                    <Link href='#' isExternal>About</Link>
-            </GridItem>
-            <GridItem area={'projects'}>
-                    <Link href='#' isExternal>Projects</Link>
-            </GridItem>
-            <GridItem area={'experience'}>
-                    <Link href='#' isExternal>Experience</Link>
-            </GridItem>
+            
+            
+            
+            
             
         </Grid>
         </Container>

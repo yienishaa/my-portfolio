@@ -3,45 +3,42 @@ import "@fontsource/yeseva-one";
 import placeholder from './images/placeholder.png';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { PhoneIcon, AddIcon, WarningIcon } from '@chakra-ui/icons'
-//const element = <FontAwesomeIcon icon={} />
+import {
+    List,
+    ListItem,
+    ListIcon,
+    OrderedList,
+    UnorderedList,
+  } from '@chakra-ui/react'
+
+const skills_ecomm = "PHP, MySQL, HTML, CSS, JavaScript, Twilio, PayPal, Canada Post"
+const overviewecomm = "Before the new design the old design was a static HTML/CSS website with no shopping cart facility. The new feature additions were adding a shopping cart, subscribing for subscription system to replace old parts, PayPal payments (one time and subscription charging), appointment reminders via email and SMS (twilio), shipping label creation with Canada Post. Keeping track of items added to cart by users, user management system"
+const status_e = "Completed and deployed internal"
 
 
 function ProjectDescription(){
     
     return(
         <Container size='lg' h='100vh'>
-            <Text fontSize='4xl' fontFamily='Yeseva One'>E-Commerce Website</Text>
-            <Box h='fit-content' boxSize='sm'>
-                <Image size='sm' src={placeholder}/>
-            </Box>
-            <Box position='relative' padding='10'>
-                <Divider width='100%' borderWidth='1px'borderColor='brand.300' />
-                <AbsoluteCenter bg='brand.300' color='textBrand.100' px='4'>Overview</AbsoluteCenter>
-            </Box>
+            <Text fontSize='4xl' fontFamily='Yeseva One' color='textBrand.100'>E-Commerce Website</Text>
+            <Divider />
+            
             <Grid
-                h='200px'
-                templateRows='repeat(2, 1fr)'
-                templateColumns='repeat(10, 1fr)'
-                gap={4}>
+                //h='200px'
+                color='textBrand.100'
+                templateColumns='repeat(2, 1fr)'
+                rowGap={5}
+                columnGap={10}>
                 
-                <GridItem>SKILLS</GridItem>
-                <GridItem>
-                    <Icon as={PhoneIcon} w={50} h={50}/>
-                    
-                </GridItem>
-                <GridItem>
-                    <Icon as={PhoneIcon} w={50} h={50}/>
-                </GridItem>
-                <GridItem>
-                    <Icon as={PhoneIcon} w={50} h={50}/>
-                </GridItem>
-                <GridItem>
-                    <Icon as={PhoneIcon} w={50} h={50}/>
-                </GridItem>
-                <GridItem rowSpan={2} colSpan={1}>STATUS</GridItem>
+                <GridItem><b>OVERVIEW</b></GridItem>
+                <GridItem><b>STATUS</b></GridItem>
                 
-                    
-                
+                <GridItem>{overviewecomm}</GridItem>
+                <GridItem>{status_e}</GridItem>
+
+                <GridItem colSpan={2}><b>SKILLS</b></GridItem>
+                <GridItem>{skills_ecomm}</GridItem>
+
             </Grid>
 
 
