@@ -40,7 +40,7 @@ const theme = extendTheme({
         global: {
           'html,body':{
             //bgGradient:'linear(to-b, brand.700 , brand.600, brand.500 ,brand.400, brand.300, brand.200, brand.100)',
-            bgGradient:'linear(to-b, brand.2000 , brand.1000, brand.2000 )',
+            bgGradient:'linear(to-b, brand.2000 , brand.1000 )',
             bgRepeat: 'no-repeat',
             fontFamily: 'montserrat',
           },

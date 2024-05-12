@@ -6,77 +6,44 @@ import theme from './CustomTheme'
 import About from './components/About';
 import Projects from './components/Projects';
 import Contact from './components/Contact'
-import ProjectDescription from './components/Project-Description';
+import ProjectDescription from './components/Project-Description'
+import { BrowserRouter, Routes, Route, Link } from 'react-router-dom';
 import { motion} from "framer-motion";
 import {
-  useViewportScroll,
-  
+  useScroll,
+  useSpring,
   useTransform,
+  MotionValue,
   
-} from 'framer-motion';
+} from "framer-motion";
 import { useInView } from 'react-intersection-observer';
 
+const pages = [
+  { id: 1, component: Home },
+  { id: 2, component: About },
+  { id: 3, component: Projects },
+];
+
+function useParallax(value, distance) {
+  return useTransform(value, [0, 1], [-distance, distance]);
+}
 
 
 function App() {
-  const { scrollY } = useViewportScroll();
-  const y1 = useTransform(scrollY, [0, 300], [0, 200]);
-  const y2 = useTransform(scrollY, [0, 300], [0, -100]);
-  const y3 = useTransform(scrollY, [0, 300], [0, 200]);
-
-  const [ref, inView, entry] = useInView({
-    /* Optional options */
-    threshold: 0.5,
-    triggerOnce: false
-  });
-
-  const spring = {
-    type: "spring",
-    damping: 10,
-    stiffness: 100
-  }
-
-  console.log(entry);
-  const variants = {
-    visible: { opacity: 1, scale: 1, y: 0 },
-    hidden: {
-      opacity: 0,
-      scale: 0.65,
-      y: 50
-    }
-  };
-
-  return (
-    <ChakraProvider theme={theme} >
-      <motion.div>
-        <Home/>
-        </motion.div>
-       
-      <motion.div 
-        animate={inView ? 'visible' : 'hidden'}
-        variants={variants}
-        viewport={{ once: true, amount: 0.8 }}
-          >
-        <About/>
-       
-      </motion.div>
-      <motion.div
-      animate={inView ? 'visible' : 'hidden'}
-      variants={variants}
-      transition={spring}
-      >
-        <Projects/>
-      </motion.div>
-      <motion.div>
-        <ProjectDescription/>
-      </motion.div>
-      <motion.div style={{ y: y3, x: 50 }}>
-        <Contact/>
-      </motion.div>
-      
+  return(
+    <ChakraProvider theme={theme}>
+    <BrowserRouter>
+      <main>
+        <Routes>
+          <Route path='my-portfolio/' element={<Home/>}/>
+          <Route path='my-portfolio/about' element={<About/>}/>
+        </Routes>
+      </main>
+    </BrowserRouter>
     </ChakraProvider>
   );
 }
+
 
 export default App;
 
