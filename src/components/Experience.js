@@ -1,14 +1,12 @@
 import { useRef} from 'react';
 import {  Container, VStack, Center,Text, Stack, Image, Box, Heading} from '@chakra-ui/react'
 import "@fontsource/yeseva-one"; 
-import { gsap } from "gsap";
-import { ScrollTrigger } from "gsap/ScrollTrigger";
-import { useGSAP } from '@gsap/react';
+
+
 import img1 from './scotia.jpg'
-import { Card, CardHeader, CardBody, CardFooter } from '@chakra-ui/react'
 
 
-gsap.registerPlugin(useGSAP, ScrollTrigger);
+
 
 function Experience(){
 

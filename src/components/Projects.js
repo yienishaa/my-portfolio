@@ -1,11 +1,11 @@
 import { useRef} from 'react';
-import {  Container, Center,Text, SimpleGrid, Heading, Button,Card, CardHeader, CardBody, Stack} from '@chakra-ui/react'
+import {  Container, Center,Text, SimpleGrid, Button} from '@chakra-ui/react'
 import "@fontsource/yeseva-one"; 
 
 
 
 
-const titles = ['Scotiabank','Etisalat']
+
 
 function Projects(){
 
@@ -14,7 +14,7 @@ function Projects(){
     
 
     return(
-        <Container size='lg' h='150vh'>
+        <Container size='lg' h='100vh'>
         <Center >
             <Container  size='lg' ref={project}>
                 

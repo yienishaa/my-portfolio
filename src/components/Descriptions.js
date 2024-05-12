@@ -1,10 +1,9 @@
-import { useRef} from 'react';
+
 import {  Container, VStack, Center,Text, Stack, Image, Box, Heading} from '@chakra-ui/react'
 import "@fontsource/yeseva-one"; 
-import { gsap } from "gsap";
-import { ScrollTrigger } from "gsap/ScrollTrigger";
+
 import img1 from './scotia.jpg'
-import { useBoolean } from '@chakra-ui/react'
+
 import React, { useState } from 'react';
 
 

@@ -1,14 +1,12 @@
 import {Container, Text, Center, Stack, Heading} from '@chakra-ui/react'
-import { gsap } from "gsap";
-import { ScrollTrigger } from "gsap/ScrollTrigger";
-import { useGSAP } from '@gsap/react';
 
-gsap.registerPlugin(useGSAP, ScrollTrigger);
+
+
 
 function About(){
 
     return(
-        <Center height='100vh'  >
+        <Center height='100vh' className='about-me' >
             <Stack>
             <Container size='md'>
                 <Heading variant='custom' >About Me</Heading>
