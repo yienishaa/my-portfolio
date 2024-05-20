@@ -1,9 +1,6 @@
 import {  Container, Grid,GridItem,Text, Divider} from '@chakra-ui/react'
 import "@fontsource/yeseva-one"; 
-//import { ReactComponent as designWires } from './images/25703377_10667651479944.svg';
-//import logs from './images/abstract-3d-thin-line-wireframe-for-futuristic-design-element-png.webp'
-//import cone from './images/cone-2789627_1920.png'
-import geomatric from './images/geometric-8015996_1920.png'
+
 
 
 const skills_ecomm = "PHP, MySQL, HTML, CSS, JavaScript, Twilio, PayPal, Canada Post"
