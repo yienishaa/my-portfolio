@@ -1,13 +1,12 @@
 import React, { useRef } from 'react';
-import './styles.css';
-import {ChakraProvider} from '@chakra-ui/react';
+import {Card, ChakraProvider, Container, transition} from '@chakra-ui/react';
 import Home from './components/Home'
 import theme from './CustomTheme'
 import About from './components/About';
 import Projects from './components/Projects';
 import Contact from './components/Contact'
 import ProjectDescription from './components/Project-Description'
-import { BrowserRouter, Routes, Route, Link } from 'react-router-dom';
+
 import { motion} from "framer-motion";
 import {
   useScroll,
@@ -16,31 +15,51 @@ import {
   MotionValue,
   
 } from "framer-motion";
-import { useInView } from 'react-intersection-observer';
 
-const pages = [
-  { id: 1, component: Home },
-  { id: 2, component: About },
-  { id: 3, component: Projects },
-];
-
-function useParallax(value, distance) {
-  return useTransform(value, [0, 1], [-distance, distance]);
-}
-
+const animateWhenInview ={
+  initial: {
+    opacity:0,
+  },
+  animate: {
+    opacity:1,
+    transition:{
+      delay:0.5,
+    }
+  },
+};
 
 function App() {
-  return(
-    <ChakraProvider theme={theme}>
-    <BrowserRouter>
-      <main>
-        <Routes>
-          <Route path='my-portfolio/' element={<Home/>}/>
-          <Route path='my-portfolio/about' element={<About/>}/>
-        </Routes>
-      </main>
-    </BrowserRouter>
+
+  return (
+    <ChakraProvider theme={theme} >
+      <motion.div 
+      variants={animateWhenInview}
+      initial="initial"
+      whileInView="animate">
+        <Home/>
+      </motion.div>
+      <motion.div
+      variants={animateWhenInview}
+      initial="initial"
+      whileInView="animate">
+        <About/>
+      </motion.div> 
+      <motion.div
+      variants={animateWhenInview}
+      initial="initial"
+      whileInView="animate">
+        <Projects/>
+      </motion.div> 
+      {Projects.u}
+      <motion.div
+      variants={animateWhenInview}
+      initial="initial"
+      whileInView="animate">
+        <Contact/>
+      </motion.div>  
+        
     </ChakraProvider>
+    
   );
 }
 

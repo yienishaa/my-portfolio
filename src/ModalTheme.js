@@ -1,0 +1,29 @@
+import { modalAnatomy as parts } from '@chakra-ui/anatomy'
+import { createMultiStyleConfigHelpers } from '@chakra-ui/styled-system'
+import geomatric from './components/images/28352879_v882-kul-49-a.svg'
+import logos from './components/images/25703377_10667651479944.svg'
+
+const { definePartsStyle, defineMultiStyleConfig } =
+  createMultiStyleConfigHelpers(parts.keys)
+
+const baseStyle = definePartsStyle({
+  // define the part you're going to style
+  overlay: {
+    bg: 'blackAlpha.200', //change the background
+    
+  },
+  dialog: {
+    borderRadius: 'md',
+    backgroundImage: logos,
+    backgroundPosition: 'bottom 10% right 5%',
+    backgroundSize: '60%',
+    backgroundRepeat: 'no-repeat',
+    bg: 'brand.2000 ',
+    //bg: 'radial-gradient(white, skyblue)',
+    
+  },
+})
+
+export const modalTheme = defineMultiStyleConfig({
+  baseStyle,
+})

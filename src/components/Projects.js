@@ -1,22 +1,32 @@
-import { useRef} from 'react';
-import {  Container, Center,Text, SimpleGrid, Button} from '@chakra-ui/react'
+import { useRef, useState} from 'react';
+import {  Container, Center,Text, SimpleGrid, Button, Modal,
+    ModalOverlay,
+    ModalContent,
+    ModalHeader,
+    ModalFooter,
+    ModalBody,
+    ModalCloseButton, useDisclosure,
+    color} from '@chakra-ui/react'
+   
 import "@fontsource/yeseva-one"; 
+import { BrowserRouter, Routes, Route, Link } from 'react-router-dom';
+import ProjectDescription from './Project-Description';
 
 
-
-
-
+  
 
 function Projects(){
 
-    const project = useRef();
+    const { isOpen, onOpen, onClose } = useDisclosure()
 
+    const initialRef = useRef(null)
+    const finalRef = useRef(null)
     
 
     return(
         <Container size='lg' h='100vh'>
         <Center >
-            <Container  size='lg' ref={project}>
+            <Container  size='lg' >
                 
 
                 <SimpleGrid 
@@ -31,17 +41,68 @@ function Projects(){
                         border='2px'
                         borderColor='white.500'
                         borderRadius='10'
-                        colorScheme='whiteAlpha' variant='outline'>
+                        colorScheme='whiteAlpha' variant='outline'
+                        onClick={onOpen}>
                         <Text fontSize='3xl'>Scotiabank</Text>
                     </Button>
+
+                    <Modal
+                        initialFocusRef={initialRef}
+                        finalFocusRef={finalRef}
+                        isOpen={isOpen}
+                        onClose={onClose}
+                        size='6xl'
+                    >
+                        <ModalOverlay />
+                        <ModalContent>
+                            
+                            <ModalCloseButton />
+                            <ModalBody pb={6}>
+                            <ProjectDescription/>
+                            </ModalBody>
+
+                            <ModalFooter>
+                                <Button onClick={onClose}>Cancel</Button>
+                            </ModalFooter>
+                        </ModalContent>
+                    </Modal>
+
+
+
+
+
                     <Button
                         height='100px'
                         border='2px'
                         borderColor='white.500'
                         borderRadius='10'
-                        colorScheme='whiteAlpha' variant='outline'>
+                        colorScheme='whiteAlpha' variant='outline'
+                        onClick={onOpen}>
                         <Text fontSize='3xl'>Bill Shock Prevention Notifier</Text>
                     </Button>
+                    <Modal
+                        initialFocusRef={initialRef}
+                        finalFocusRef={finalRef}
+                        isOpen={isOpen}
+                        onClose={onClose}
+                        size='6xl'
+                    >
+                        <ModalOverlay />
+                        <ModalContent>
+                            
+                            <ModalCloseButton />
+                            <ModalBody pb={6}>
+                            <ProjectDescription/>
+                            </ModalBody>
+
+                            <ModalFooter>
+                                <Button onClick={onClose}>Cancel</Button>
+                            </ModalFooter>
+                        </ModalContent>
+                    </Modal>
+
+
+
                     <Button
                         height='100px'
                         border='2px'

@@ -4,7 +4,7 @@ import "@fontsource/montserrat"; // Defaults to weight 400
 import { Button } from '@chakra-ui/react'
 import { ChevronDownIcon } from '@chakra-ui/icons'
 import React, { useRef } from 'react'
-
+import { SkipNavLink, SkipNavContent } from '@chakra-ui/skip-nav'
 
 
 function Home(){
@@ -37,8 +37,6 @@ function Home(){
 
             
             
-              <Button borderRadius='30' color='gray.100' rightIcon={<ChevronDownIcon />} 
-                colorScheme='gray' variant='outline' >MY BEST WORK</Button> 
             </Stack>
             </Center> 
     );

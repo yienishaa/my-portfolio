@@ -7,6 +7,9 @@ import "@fontsource/montserrat"; // Defaults to weight 400
 import "@fontsource/montserrat/400.css"; // Specify weight
 import "@fontsource/montserrat/400-italic.css"; // Specify weight and style
 
+import { modalTheme } from './ModalTheme'
+
+
 
 
 const theme = extendTheme({
@@ -52,8 +55,10 @@ const theme = extendTheme({
   components: {
      Container: containerTheme,
      Heading: headingTheme,
+     Modal: modalTheme,
   },
   
 })
 
 export default theme;
+
