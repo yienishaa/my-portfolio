@@ -1,10 +1,8 @@
 {
   "files": {
     "main.css": "/my-portfolio/static/css/main.9977209e.css",
-    "main.js": "/my-portfolio/static/js/main.b9d64e24.js",
+    "main.js": "/my-portfolio/static/js/main.4c646b7d.js",
     "static/js/453.ed3810f9.chunk.js": "/my-portfolio/static/js/453.ed3810f9.chunk.js",
-    "static/media/28352879_v882-kul-49-a.svg": "/my-portfolio/static/media/28352879_v882-kul-49-a.2c362824b90c3ea9e01eeda653dbe8c8.svg",
-    "static/media/geometric-8015996_1920.png": "/my-portfolio/static/media/geometric-8015996_1920.03131bc16aca9e72b5d6.png",
     "static/media/25703377_10667651479944.svg": "/my-portfolio/static/media/25703377_10667651479944.a17a7304084d61d710ae467baeb4220a.svg",
     "static/media/YienishaAbeyratne_NI.pdf": "/my-portfolio/static/media/YienishaAbeyratne_NI.437e86f7f3ce7367fc2a.pdf",
     "static/media/montserrat-latin-400-italic.woff": "/my-portfolio/static/media/montserrat-latin-400-italic.dbde806dd2fc6a983483.woff",
@@ -44,11 +42,11 @@
     "index.html": "/my-portfolio/index.html",
     "static/media/chakraui.svg": "/my-portfolio/static/media/chakraui.3077d4c8eb2eeffaca8bf04bcf3acfdd.svg",
     "main.9977209e.css.map": "/my-portfolio/static/css/main.9977209e.css.map",
-    "main.b9d64e24.js.map": "/my-portfolio/static/js/main.b9d64e24.js.map",
+    "main.4c646b7d.js.map": "/my-portfolio/static/js/main.4c646b7d.js.map",
     "453.ed3810f9.chunk.js.map": "/my-portfolio/static/js/453.ed3810f9.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.9977209e.css",
-    "static/js/main.b9d64e24.js"
+    "static/js/main.4c646b7d.js"
   ]
 }
