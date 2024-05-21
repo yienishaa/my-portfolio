@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/my-portfolio/static/css/main.9977209e.css",
-    "main.js": "/my-portfolio/static/js/main.78ad5b6e.js",
+    "main.js": "/my-portfolio/static/js/main.f43206cc.js",
     "static/js/453.ed3810f9.chunk.js": "/my-portfolio/static/js/453.ed3810f9.chunk.js",
     "static/media/25703377_10667651479944.svg": "/my-portfolio/static/media/25703377_10667651479944.a17a7304084d61d710ae467baeb4220a.svg",
     "static/media/YienishaAbeyratne_NI.pdf": "/my-portfolio/static/media/YienishaAbeyratne_NI.437e86f7f3ce7367fc2a.pdf",
@@ -35,18 +35,19 @@
     "static/media/yeseva-one-vietnamese-400-normal.woff": "/my-portfolio/static/media/yeseva-one-vietnamese-400-normal.01390f6cefac51b10978.woff",
     "static/media/montserrat-vietnamese-400-normal.woff2": "/my-portfolio/static/media/montserrat-vietnamese-400-normal.176348415471f3e062e6.woff2",
     "static/media/montserrat-vietnamese-400-italic.woff2": "/my-portfolio/static/media/montserrat-vietnamese-400-italic.bc1e3ae9cbfe88134bcc.woff2",
+    "static/media/node.svg": "/my-portfolio/static/media/node.760ae109fbe255aef744efad33cc0086.svg",
     "static/media/filetype-css.svg": "/my-portfolio/static/media/filetype-css.1361213383d261b02df2dfb3c50c2c0e.svg",
     "static/media/opencv.svg": "/my-portfolio/static/media/opencv.01f05ffdabb3bdd7a77f68cbe25ea47d.svg",
+    "index.html": "/my-portfolio/index.html",
     "static/media/jupyter.svg": "/my-portfolio/static/media/jupyter.40c0a52c3da647f8e772e4a5b8cb3f8c.svg",
     "static/media/numpy.svg": "/my-portfolio/static/media/numpy.503cba60cdbac23c11907c67d369ebf5.svg",
-    "index.html": "/my-portfolio/index.html",
     "static/media/chakraui.svg": "/my-portfolio/static/media/chakraui.3077d4c8eb2eeffaca8bf04bcf3acfdd.svg",
     "main.9977209e.css.map": "/my-portfolio/static/css/main.9977209e.css.map",
-    "main.78ad5b6e.js.map": "/my-portfolio/static/js/main.78ad5b6e.js.map",
+    "main.f43206cc.js.map": "/my-portfolio/static/js/main.f43206cc.js.map",
     "453.ed3810f9.chunk.js.map": "/my-portfolio/static/js/453.ed3810f9.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.9977209e.css",
-    "static/js/main.78ad5b6e.js"
+    "static/js/main.f43206cc.js"
   ]
 }
