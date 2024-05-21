@@ -1,4 +1,4 @@
-import {  Container, Grid,GridItem,Text, Divider} from '@chakra-ui/react'
+import {  Container, SimpleGrid,GridItem,Text, Divider, Stack} from '@chakra-ui/react'
 import "@fontsource/yeseva-one"; 
 
 const projecttitle = ["E-Commerce Website", "Portfolio Website", "SMART ROAM", "Lost Roamer heat map", "Bill Shock Prevention Notifier"]
@@ -34,31 +34,24 @@ const status = [status_e,status_web, status_sr, status_lr, status_bs]
 function ProjectDescription({id}){
     
     return(
-        <Container size='lg'>
-            <Text fontSize='4xl' fontFamily='Yeseva One' color='textBrand.100'>{projecttitle[id]}</Text>
+        <Container size={['sm','md','lg']} color='textBrand.100'>
+            <Text fontSize={['xl','2xl','3xl']} 
+                fontFamily='Yeseva One'>{projecttitle[id]}</Text>
             <Divider />
-            
-            <Grid
-                //h='200px'
-                color='textBrand.100'
-                templateColumns='repeat(2, 1fr)'
-                rowGap={5}
-                columnGap={10}
-                
-                >
-                
-                <GridItem><b>OVERVIEW</b></GridItem>
-                <GridItem><b>STATUS</b></GridItem>
-                
-                <GridItem>{overviews[id]}</GridItem>
-                <GridItem>{status[id]}</GridItem>
-
-                <GridItem colSpan={2}><b>SKILLS</b></GridItem>
-                <GridItem>{skills[id]}</GridItem>
-
-            </Grid>
-
-
+            <SimpleGrid columns={[1, null, 2]} spacing={10}>
+                <Stack direction={['column', 'column']} >
+                    <Text><b fontFamily='montserrat'>OVERVIEW</b></Text>
+                    <Text fontFamily='montserrat' fontWeight='400'>{overviews[id]}</Text>
+                </Stack>
+                <Stack direction={['column', 'column']} >
+                    <Text><b>STATUS</b></Text>
+                    <Text fontFamily='montserrat' fontWeight='400'>{status[id]}</Text>
+                </Stack>
+                <Stack direction={['column', 'column']} >
+                    <Text colSpan={2}><b>SKILLS</b></Text>
+                    <Text fontFamily='montserrat' fontWeight='400'>{skills[id]}</Text>
+                </Stack>
+            </SimpleGrid>
         </Container>
     );
 }

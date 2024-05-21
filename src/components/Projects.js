@@ -52,21 +52,19 @@ function Projects(){
             id = {buttons.id}
             variant='projectButtons'
             onClick={() => openClick(buttons.id)}>
-            <Text fontSize='3xl'>{buttons.name}</Text>
+            <Text fontSize={['lg','xl','3xl']}>{buttons.name}</Text>
         </Button>
   );
  
 
 
     return(
-        <Container size='lg' h='100vh'>
-        <Center >
-            <Container  size='lg' >
+       
+        <Center h='100vh'>
+            <Container  size={['sm','md','lg']} marginTop={[20,20/2, 20/4,20/8]}>
                 
-            <Text color='textBrand.100' fontFamily='Yeseva One' fontSize='5xl' >Projects</Text>
-                <SimpleGrid 
-                    columns={2} 
-                    spacing={10} 
+            <Text color='textBrand.100' fontFamily='Yeseva One' fontSize={['4xl','5xl','7xl']} >Projects</Text>
+                <SimpleGrid columns={[1, null, 2]} spacing={10} 
                     //minChildWidth='100px'
                     >
                     
@@ -95,7 +93,7 @@ function Projects(){
                 </SimpleGrid>
             </Container>
         </Center>
-        </Container>
+        
 
     );
 }

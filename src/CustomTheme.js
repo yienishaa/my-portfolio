@@ -14,6 +14,16 @@ import "@fontsource/montserrat/400-italic.css"; // Specify weight and style
 import { modalTheme } from './ModalTheme'
 
 
+// These are the default breakpoints
+const breakpoints = {
+  base: '0em', // 0px
+  sm: '30em', // ~480px. em is a relative unit and is dependant on the font-size.
+  md: '48em', // ~768px
+  lg: '62em', // ~992px
+  xl: '80em', // ~1280px
+  '2xl': '96em', // ~1536px
+}
+
 
 
 const theme = extendTheme({
@@ -40,6 +50,14 @@ const theme = extendTheme({
       700: "#495057",
       800: "#343A40",
       900: "#212529",
+    },
+    breakpoints: {
+      base: '0em', // 0px
+      sm: '30em', // ~480px. em is a relative unit and is dependant on the font-size.
+      md: '48em', // ~768px
+      lg: '62em', // ~992px
+      xl: '80em', // ~1280px
+      '2xl': '96em', // ~1536px
     },
   },
     

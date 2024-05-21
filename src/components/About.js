@@ -89,7 +89,7 @@ function About(){
     const webList = webLang.map(webDevLang => 
         <Box height='80px' color='white'>
             <Tooltip label={webDevLang.skill} fontSize='md'>
-                <span><Icon as={webDevLang.brandIcon} boxSize={16}/></span>
+                <span><Icon  as={webDevLang.brandIcon} boxSize={16}/></span>
             </Tooltip>
         </Box>
     );
@@ -106,10 +106,10 @@ function About(){
         <Center height='100vh' className='about-me' >
             <Stack>
             <Container size='lg'>
-                <Heading variant='custom' >About Me</Heading>
+                <Heading variant={['mobile', 'mobile', 'custom']} >About Me</Heading>
             </Container>
             <Container size='lg'>
-                <Text  fontSize='xl' color='white'>
+                <Text  fontSize={['lg','xl']} color='white'>
                 I have over 10 years of experience designing the user interface and user experience of dozens of 
                 today's top websites and apps. 
                 I am passionate about bold but intuitive design, and doing work for companies with social responsibility.
@@ -117,7 +117,7 @@ function About(){
                 <Box padding='10' />
                 
                 {/*<SimpleGrid columns={[2, null, 10]} spacing='40px'>{langList}</SimpleGrid>*/}
-                <SimpleGrid columns={[2, null, 12]} spacing='40px'>
+                <SimpleGrid columns={[4, null, 12]} spacing='40px'>
                     {webList}
                     {backList}
                     {dbList}

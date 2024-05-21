@@ -6,10 +6,16 @@ const custom = defineStyle({
     fontFamily: 'yeseva one',
     fontSize: '7xl',
 })
+const mobile = defineStyle({
+    color: 'textBrand.100',
+    fontFamily: 'yeseva one',
+    fontSize: '3xl',
+})
 
 // export the component theme
 export const headingTheme = defineStyleConfig({
     variants: {
         "custom": custom,
+        "mobile": mobile,
     },
 })
