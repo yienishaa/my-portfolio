@@ -1,28 +1,10 @@
-body {
-    
-    
-    height: 100vh;
-    
-    color: #fff;
-  }
-  
-  .box {
-    width: 150px;
-    height: 150px;
-    border-radius: 1em;
-    background-color: #f9f07e;
-    margin-left: auto;
-    margin-right: auto;
-  }
-  
-  .magic {
-    width: 200px;
-    height: 200px;
-    background-color: #fff;
-    border-radius: 20px;
-    margin-left: auto;
-    margin-right: auto;
-  }
-  .about-me{
-    color: #fff;
-  }
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+
+
+.montserrat-100 {
+  font-family: "Montserrat", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 100;
+  font-style: normal;
+}

@@ -50,11 +50,7 @@ function Projects(){
    const buttonList = projects.map(buttons =>
         <Button 
             id = {buttons.id}
-            height='100px'
-            border='2px'
-            borderColor='white.500'
-            borderRadius='10'
-            colorScheme='whiteAlpha' variant='outline'
+            variant='projectButtons'
             onClick={() => openClick(buttons.id)}>
             <Text fontSize='3xl'>{buttons.name}</Text>
         </Button>
@@ -66,6 +62,7 @@ function Projects(){
         <Container size='lg' h='100vh'>
         <Center >
             <Container  size='lg' >
+                
             <Text color='textBrand.100' fontFamily='Yeseva One' fontSize='5xl' >Projects</Text>
                 <SimpleGrid 
                     columns={2} 

@@ -5,7 +5,8 @@ import theme from './CustomTheme'
 import About from './components/About';
 import Projects from './components/Projects';
 import Contact from './components/Contact'
-import ProjectDescription from './components/Project-Description'
+
+
 
 import { motion} from "framer-motion";
 import {

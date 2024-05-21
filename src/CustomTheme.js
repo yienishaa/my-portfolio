@@ -1,6 +1,10 @@
 import { extendTheme } from '@chakra-ui/react';
 import { containerTheme } from './CustomContainerSize';
 import {headingTheme} from './HeadingTheme';
+import { buttonTheme } from './ButtonTheme'
+
+
+
 
 import "@fontsource/yeseva-one"; 
 import "@fontsource/montserrat"; // Defaults to weight 400
@@ -46,6 +50,8 @@ const theme = extendTheme({
             bgGradient:'linear(to-b, brand.2000 , brand.1000 )',
             bgRepeat: 'no-repeat',
             fontFamily: 'montserrat',
+            fontWeight: '400',
+            FontFace: 'normal',
           },
           'heading':{
             fontFamily: 'yeseva-one',
@@ -56,6 +62,7 @@ const theme = extendTheme({
      Container: containerTheme,
      Heading: headingTheme,
      Modal: modalTheme,
+     Button: buttonTheme,
   },
   
 })
