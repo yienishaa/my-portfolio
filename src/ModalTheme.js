@@ -18,7 +18,7 @@ const baseStyle = definePartsStyle({
     backgroundPosition: 'bottom 10% right 5%',
     backgroundSize: '60%',
     backgroundRepeat: 'no-repeat',
-    bg: 'brand.2000 ',
+    bg: 'brand.2001 ',
     
     
   },

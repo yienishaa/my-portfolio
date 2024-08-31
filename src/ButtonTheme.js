@@ -37,9 +37,9 @@ const outline = defineStyle({
     border: '1px',
 
     _hover: {
-      background: "brand.2000",
+      background: "brand.2001",
       color: "white",
-      borderColor: 'brand.2000',
+      borderColor: 'brand.1001',
     }
             
   })

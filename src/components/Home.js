@@ -16,9 +16,9 @@ function Home(){
                 <Heading variant={['mobile',null,'custom']}>Hi, I'm </Heading>
                 <Heading variant={['mobile',null,'custom']} color='white'>&#60;&#47;Yienisha Abeyratne&#62;,</Heading>
                     
-                <Text fontSize={['xl','xl','2xl']}  color='textBrand.100' w='100%'>a 4th year CS student at York University. I’m passionate about</Text>
-                <Text fontSize={['lg','xl','2xl']} color='textBrand.400'>Software Development & </Text>
-                <Text fontSize={['lg','xl','2xl']} color='textBrand.400'>Data Science.</Text>
+                <Text fontSize={['xl','xl','2xl']}  fontWeight='500' color='black' w='100%'>a 4th year CS student at York University. I’m passionate about</Text>
+                <Text fontSize={['lg','xl','2xl']} color='white'>Software Engineering,  Fullstack Development &</Text>
+                <Text fontSize={['lg','xl','2xl']} color='white'>Data Analytics.</Text>
         
             </Stack>  
         </Center> 

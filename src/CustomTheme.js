@@ -37,6 +37,9 @@ const theme = extendTheme({
       500: "#DB98B9",
       600: "#B796B9",
       700: "#9F8FB6",
+      1001:"#C2F970",
+      2001: "#203E84",
+      
       1000: "#120A8F",
       2000: "#01796F",
     },
@@ -65,7 +68,7 @@ const theme = extendTheme({
         global: {
           'html,body':{
             //bgGradient:'linear(to-b, brand.700 , brand.600, brand.500 ,brand.400, brand.300, brand.200, brand.100)',
-            bgGradient:'linear(to-b, brand.2000 , brand.1000 )',
+            bgGradient:'linear(to-l, brand.1001 ,brand.2001 )',
             bgRepeat: 'no-repeat',
             fontFamily: 'montserrat',
             fontWeight: '400',
