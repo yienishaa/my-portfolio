@@ -12,93 +12,55 @@ import { ReactComponent as cssfile } from './images/filetype-css.svg';
 const langs = [    {
     skill: "Linux/Unix",
     brandIcon: DiLinux,
-}, {
-    skill: "OpenCV",
-    brandIcon: opencv,
-}, {
-    skill: "NumPy",
-    brandIcon: numpy,
-}, {
-    skill: "Jupyter Notebook",
-    brandIcon: jupyter,
+    label: "Linux",
 }, {
     skill: "Twilio",
     brandIcon: SiTwilio,
-}]
-
-const databases = [{
+    label: "Twilio",
+}, {
     skill: "MySQL",
     brandIcon: SiMysql,
+    label: "MySQL",
 }, {
     skill: "Microsoft SQL Server",
     brandIcon: SiMicrosoftsqlserver,
-}]
-
-const backend = [{
+    label: "Microsoft SQL Server"
+}, {
     skill: "Python",
     brandIcon: DiPython,
+    label: "Python",
 }, {
     skill: "Java",
     brandIcon: DiJava,
+    label: "Java",
 }, {
-    skill: "C/C++",
-    brandIcon: SiCplusplus,
-}]
-
-const webLang = [{
     skill: "HTML5",
     brandIcon: TiHtml5,
+    label: "HTML5",
 }, {
     skill: "CSS",
     brandIcon: cssfile,
+    label: "CSS",
 }, {
     skill: "React",
     brandIcon: DiReact,
+    label: "React",
 },  {
     skill: "Node.js",
     brandIcon: node,
+    label: "Node.js",
 }, {
     skill: "JavaScript",
     brandIcon: SiJavascript,
-}, {
-    skill: "PHP",
-    brandIcon: DiPhp,
-}, {
-    skill: "Chakra-UI",
-    brandIcon: chakraui,
+    label: "JavaScript",
 }]
 
 function About(){
 
-    const dbList = databases.map(db => 
+    const miscList = langs.map(misc =>
         <Box height='80px' color='white'>
-            <Tooltip label={db.skill} fontSize='md'>
-                <span><Icon as={db.brandIcon} boxSize={16}/></span>
-            </Tooltip>
-        </Box>
-    );
-
-    const miscList = langs.map(misc => 
-        <Box height='80px' color='white'>
-            <Tooltip label={misc.skill} fontSize='md'>
-                <span><Icon as={misc.brandIcon} boxSize={16}/></span>
-            </Tooltip>
-        </Box>
-    );
-
-    const webList = webLang.map(webDevLang => 
-        <Box height='80px' color='white'>
-            <Tooltip label={webDevLang.skill} fontSize='md'>
-                <span><Icon  as={webDevLang.brandIcon} boxSize={16}/></span>
-            </Tooltip>
-        </Box>
-    );
-
-    const backList = backend.map(backendDev => 
-        <Box height='80px' color='white'>
-            <Tooltip label={backendDev.skill} fontSize='md'>
-                <span><Icon as={backendDev.brandIcon} boxSize={16}/></span>
-            </Tooltip>
+          <span><Icon as={misc.brandIcon} boxSize={14}/></span>
+          <Text>{misc.label}</Text>
         </Box>
     );
 
@@ -118,11 +80,7 @@ function About(){
                 
                 {/*<SimpleGrid columns={[2, null, 10]} spacing='40px'>{langList}</SimpleGrid>*/}
                 <SimpleGrid columns={[4, null, 12]} spacing='40px'>
-                    {webList}
-                    {backList}
-                    {dbList}
                     {miscList}
-                    
                 </SimpleGrid>
                 
             </Container>

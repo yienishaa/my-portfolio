@@ -21,9 +21,6 @@ function Contact(){
                     <Text><EmailIcon/> yienisha.abeyratne@gmail.com</Text>
                 </Box>
                 <Box>
-                    <Text><PhoneIcon/> +1(437)237-3254</Text>
-                </Box>
-                <Box>
                     <Link href='https://www.linkedin.com/in/yienisha/' isExternal>
                         <HStack>
                             <FaLinkedin/>

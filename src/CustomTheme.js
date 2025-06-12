@@ -68,7 +68,7 @@ const theme = extendTheme({
         global: {
           'html,body':{
             //bgGradient:'linear(to-b, brand.700 , brand.600, brand.500 ,brand.400, brand.300, brand.200, brand.100)',
-            bgGradient:'linear(to-l, brand.1001 ,brand.2001 )',
+            bgGradient:'linear(to-t, brand.100 ,brand.2001 )',
             bgRepeat: 'no-repeat',
             fontFamily: 'montserrat',
             fontWeight: '400',
