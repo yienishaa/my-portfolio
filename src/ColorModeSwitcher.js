@@ -1,23 +1,28 @@
 import React from 'react';
-import { useColorMode, useColorModeValue, IconButton } from '@mui/material';
-import { FaMoon, FaSun } from 'react-icons/fa';
+import IconButton from '@mui/material/IconButton';
+import Brightness4Icon from '@mui/icons-material/Brightness4';
+import Brightness7Icon from '@mui/icons-material/Brightness7';
+import { useTheme } from '@mui/material/styles';
+import PropTypes from 'prop-types';
 
-export const ColorModeSwitcher = props => {
-  const { toggleColorMode } = useColorMode();
-  const text = useColorModeValue('dark', 'light');
-  const SwitchIcon = useColorModeValue(FaMoon, FaSun);
+export const ColorModeSwitcher = ({ toggleColorMode }) => {
+  const theme = useTheme();
+  const isDark = theme.palette.mode === 'dark';
 
   return (
     <IconButton
-      size="md"
-      fontSize="lg"
-      aria-label={`Switch to ${text} mode`}
-      variant="ghost"
-      color="current"
-      marginLeft="2"
+      edge="end"
+      color="inherit"
+      aria-label={`Switch to ${isDark ? 'light' : 'dark'} mode`}
       onClick={toggleColorMode}
-      icon={<SwitchIcon />}
-      {...props}
-    />
+    >
+      {isDark ? <Brightness7Icon /> : <Brightness4Icon />}
+    </IconButton>
   );
 };
+
+ColorModeSwitcher.propTypes = {
+  toggleColorMode: PropTypes.func.isRequired,
+};
+
+export default ColorModeSwitcher;

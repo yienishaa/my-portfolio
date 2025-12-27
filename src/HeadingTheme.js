@@ -1,21 +1,17 @@
-import { defineStyle, defineStyleConfig } from "@mui/material"
-import "@fontsource/yeseva-one"; 
+import "@fontsource/yeseva-one";
 
-const custom = defineStyle({
-    color: 'textBrand.100',
-    fontFamily: 'yeseva one',
-    fontSize: '7xl',
-})
-const mobile = defineStyle({
-    color: 'textBrand.100',
-    fontFamily: 'yeseva one',
-    fontSize: '3xl',
-})
+// Heading theme reference for migration to MUI typography variants
+export const headingVariants = {
+  custom: {
+    color: 'text.primary',
+    fontFamily: 'Yeseva One, serif',
+    fontSize: '3.5rem',
+  },
+  mobile: {
+    color: 'text.primary',
+    fontFamily: 'Yeseva One, serif',
+    fontSize: '1.75rem',
+  },
+};
 
-// export the component theme
-export const headingTheme = defineStyleConfig({
-    variants: {
-        "custom": custom,
-        "mobile": mobile,
-    },
-})
+export default headingVariants;

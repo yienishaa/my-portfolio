@@ -1,23 +1,19 @@
-import { defineStyle, defineStyleConfig } from '@mui/material'
+// Container size presets reference for migration to MUI
+export const containerSizes = {
+  sm: {
+    maxWidth: '45ch',
+    p: 4,
+  },
+  md: {
+    maxWidth: '720px',
+    p: 6,
+    fontSize: '1rem',
+  },
+  lg: {
+    maxWidth: '100ch',
+    p: 8,
+    fontSize: '1.125rem',
+  },
+};
 
-// define custom sizes
-const sizes = {
-  sm: defineStyle({
-    maxW: '45ch',
-    p: '4',
-  }),
-  md: defineStyle({
-    maxW: 'container.sm',
-    p: '6',
-    fontSize: 'lg',
-  }),
-  lg: defineStyle({
-    maxW: '100ch',
-    p: '8',
-    fontSize: 'xl',
-  }),
-}
-
-// export the component theme
-export const containerTheme = defineStyleConfig({ sizes })
-
+export default containerSizes;

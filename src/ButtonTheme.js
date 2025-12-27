@@ -1,50 +1,30 @@
-import { defineStyle, defineStyleConfig } from '@mui/material'
+// This file previously contained Chakra-style theme helpers.
+// For MUI, button variants and overrides are defined in the theme (CustomTheme.js).
+// Keep this file as a reference for desired variants.
 
-
-
-
-const outline = defineStyle({
-    border: '2px dashed', // change the appearance of the border
-    borderRadius: 0, // remove the border radius
-    fontWeight: 'semibold', // change the font weight
-  })
-
-  const brandPrimary = defineStyle({
+export const buttonVariants = {
+  outline: {
+    border: '2px dashed',
+    borderRadius: 0,
+    fontWeight: 600,
+  },
+  brandPrimary: {
     borderColor: 'white',
-    borderRadius: '10',
-    bg: 'textBrand.100',
-    fontFamily: 'Montserrat',
-    fontWeight: '300',
-    FontFace: 'normal',
-    height: '100px',
-    border: '1px',
-  
-    _hover: {
-      background: "brand.2000",
-      color: "white",
-      borderColor: 'brand.2000',
-    }
-  })
-
-  const projectButtons = defineStyle({
+    borderRadius: 10,
+    backgroundColor: 'textBrand.100',
+    fontFamily: 'Montserrat, sans-serif',
+    fontWeight: 300,
+    height: 100,
+  },
+  projectButtons: {
     borderColor: 'white',
-    borderRadius: '10',
-    bg: 'textBrand.100',
-    fontFamily: 'Montserrat',
-    fontWeight: '300',
-    FontFace: 'normal',
-    height: '100px',
-    border: '1px',
+    borderRadius: 10,
+    backgroundColor: 'textBrand.100',
+    fontFamily: 'Montserrat, sans-serif',
+    fontWeight: 300,
+    height: 100,
+  },
+};
 
-    _hover: {
-      background: "brand.2001",
-      color: "white",
-      borderColor: 'brand.1001',
-    }
-            
-  })
-  
-  export const buttonTheme = defineStyleConfig({
-    variants: { brandPrimary, outline, projectButtons },
-  })
-  
+export default buttonVariants;
+

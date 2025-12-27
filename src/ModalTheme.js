@@ -1,29 +1,16 @@
-import { modalAnatomy as parts } from '@mui/material'
-import { createMultiStyleConfigHelpers } from '@mui/material'
-
-import logos from './components/images/25703377_10667651479944.svg'
-
-const { definePartsStyle, defineMultiStyleConfig } =
-  createMultiStyleConfigHelpers(parts.keys)
-
-const baseStyle = definePartsStyle({
-  // define the part you're going to style
+// Modal theme reference for migration. Use MUI's Dialog/Backdrop/DialogContent styling via theme.components.MuiDialog
+export const modalThemeReference = {
   overlay: {
-    bg: 'blackAlpha.200', //change the background
-    
+    backgroundColor: 'rgba(0,0,0,0.6)',
   },
   dialog: {
-    borderRadius: 'md',
-    backgroundImage: logos,
+    borderRadius: 8,
+    backgroundImage: "url('./components/images/25703377_10667651479944.svg')",
     backgroundPosition: 'bottom 10% right 5%',
     backgroundSize: '60%',
     backgroundRepeat: 'no-repeat',
-    bg: 'brand.2001 ',
-    
-    
+    backgroundColor: '#222',
   },
-})
+};
 
-export const modalTheme = defineMultiStyleConfig({
-  baseStyle,
-})
+export default modalThemeReference;
