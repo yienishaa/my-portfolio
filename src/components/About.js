@@ -1,4 +1,5 @@
-import {Container, Text, Center, Stack, Heading, Box, Grid, Icon, Tooltip, Divider, AbsoluteCenter, SimpleGrid} from '@chakra-ui/react'
+import { styled } from '@mui/material/styles';
+import {Box, Stack, Container, Grid, Typography} from '@mui/material';
 import { DiPython, DiJava, DiReact, DiPhp, DiLinux} from "react-icons/di";
 import { TiHtml5 } from "react-icons/ti";
 import { SiJavascript, SiMysql, SiMicrosoftsqlserver , SiCplusplus, SiTwilio} from "react-icons/si";
@@ -59,34 +60,33 @@ function About(){
 
     const miscList = langs.map(misc =>
         <Box height='80px' color='white'>
-          <span><Icon as={misc.brandIcon} boxSize={14}/></span>
-          <Text>{misc.label}</Text>
+          <div>{misc.label}</div>
         </Box>
     );
 
     return(
-        <Center height='100vh' className='about-me' >
+        <Box height='100vh' className='about-me' >
             <Stack>
             <Container size='lg'>
-                <Heading variant={['mobile', 'mobile', 'custom']} >About Me</Heading>
+                <Typography variant={['mobile', 'mobile', 'custom']} >About Me</Typography>
             </Container>
             <Container size='lg'>
-                <Text  fontSize={['lg','xl']} color='white'>
+                <Typography  fontSize={['lg','xl']} color='white'>
                 I have over 10 years of experience designing the user interface and user experience of dozens of 
                 today's top websites and apps. 
                 I am passionate about bold but intuitive design, and doing work for companies with social responsibility.
-                </Text>
+                </Typography>
                 <Box padding='10' />
                 
                 {/*<SimpleGrid columns={[2, null, 10]} spacing='40px'>{langList}</SimpleGrid>*/}
-                <SimpleGrid columns={[4, null, 12]} spacing='40px'>
+                <Grid columns={[4, null, 12]} spacing='40px'>
                     {miscList}
-                </SimpleGrid>
+                </Grid>
                 
             </Container>
             </Stack>
             
-            </Center> 
+            </Box>
     );
 
 }

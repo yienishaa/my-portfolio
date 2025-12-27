@@ -1,5 +1,5 @@
-import { modalAnatomy as parts } from '@chakra-ui/anatomy'
-import { createMultiStyleConfigHelpers } from '@chakra-ui/styled-system'
+import { modalAnatomy as parts } from '@mui/material'
+import { createMultiStyleConfigHelpers } from '@mui/material'
 
 import logos from './components/images/25703377_10667651479944.svg'
 

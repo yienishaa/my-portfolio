@@ -1,7 +1,6 @@
-import {  Container, HStack,Text, Grid, Link, SimpleGrid, Stack, Box} from '@chakra-ui/react'
-import "@fontsource/yeseva-one"; 
-
-import { PhoneIcon, EmailIcon } from '@chakra-ui/icons'
+import {  Container,Text, Grid, Link, SimpleGrid, Stack, Box} from '@mui/material'
+import "@fontsource/yeseva-one";
+import EmailOutlinedIcon from '@mui/icons-material/EmailOutlined';
 import { FaLinkedin, FaGithub, FaExternalLinkAlt } from "react-icons/fa";
 import resumepdf from '../resume/YienishaAbeyratne_NI.pdf'
 
@@ -14,33 +13,33 @@ function Contact(){
 
     return(
         <Container h='100vh' size={['sm','md','lg']} color='textBrand.100'  >
-            <Text   fontFamily='Yeseva One' fontSize='6xl'>Get In Touch</Text>
-            <SimpleGrid columns={[1, null, 2]} spacing={10}>
+            <Typography   fontFamily='Yeseva One' fontSize='6xl'>Get In Touch</Typography>
+            <Grid columns={[1, null, 2]} spacing={10}>
             <Stack direction={['column', 'column']} spacing='24px'>
                 <Box>
-                    <Text><EmailIcon/> yienisha.abeyratne@gmail.com</Text>
+                    <Typography><EmailOutlinedIcon/> yienisha.abeyratne@gmail.com</Typography>
                 </Box>
                 <Box>
                     <Link href='https://www.linkedin.com/in/yienisha/' isExternal>
-                        <HStack>
+                        <Stack>
                             <FaLinkedin/>
-                            <Text>linkedin.com/in/yienisha/</Text>
-                        </HStack>
+                            <Typography>linkedin.com/in/yienisha/</Typography>
+                        </Stack>
                     </Link>
                 </Box>
                 <Box>
                     <Link href='https://github.com/yienishaa/' isExternal>
-                        <HStack>
+                        <Stack>
                             <FaGithub/>
-                            <Text>github.com/yienishaa</Text>
-                        </HStack>
+                            <Typography>github.com/yienishaa</Typography>
+                        </Stack>
                     </Link>
                 </Box>     
                 <Box>
                     <Link href={resumepdf} isExternal>
-                        <HStack>
-                            <FaExternalLinkAlt/><Text>Resume</Text>
-                        </HStack>
+                        <Stack>
+                            <FaExternalLinkAlt/><Typography>Resume</Typography>
+                        </Stack>
                     </Link>
                 </Box>        
             </Stack>
@@ -58,7 +57,7 @@ function Contact(){
                     <Link href='#' isExternal>Experience</Link>
                 </Box>
             </Stack>
-            </SimpleGrid>
+            </Grid>
         </Container>
        
             

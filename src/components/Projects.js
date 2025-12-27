@@ -1,12 +1,12 @@
 import { useRef, useState} from 'react';
-import {  Container, Center,Text, SimpleGrid, Button, Modal,
+import {  Container, Center, SimpleGrid, Button, Modal,
     ModalOverlay,
     ModalContent,
     ModalHeader,
     ModalFooter,
     ModalBody,
     ModalCloseButton, useDisclosure,
-    color} from '@chakra-ui/react'
+    color} from '@mui/material'
    
 import "@fontsource/yeseva-one"; 
 
@@ -52,7 +52,7 @@ function Projects(){
             id = {buttons.id}
             variant='projectButtons'
             onClick={() => openClick(buttons.id)}>
-            <Text fontSize={['lg','xl','3xl']}>{buttons.name}</Text>
+            <Typography fontSize={['lg','xl','3xl']}>{buttons.name}</Typography>
         </Button>
   );
  
@@ -63,7 +63,7 @@ function Projects(){
         <Center h='100vh'>
             <Container  size={['sm','md','lg']} marginTop={[20,20/2, 20/4,20/8]}>
                 
-            <Text color='textBrand.100' fontFamily='Yeseva One' fontSize={['4xl','5xl','7xl']} >Projects</Text>
+            <Typography color='textBrand.100' fontFamily='Yeseva One' fontSize={['4xl','5xl','7xl']} >Projects</Typography>
                 <SimpleGrid columns={[1, null, 2]} spacing={10} 
                     //minChildWidth='100px'
                     >

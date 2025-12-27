@@ -1,5 +1,7 @@
 import React, { useRef } from 'react';
-import {Card, ChakraProvider, Container, transition} from '@chakra-ui/react';
+import {Container} from '@mui/material';
+import Card from '@mui/material/Card';
+import CardContent from '@mui/material/CardContent';
 import Home from './components/Home'
 import theme from './CustomTheme'
 import About from './components/About';
@@ -32,7 +34,7 @@ const animateWhenInview ={
 function App() {
 
   return (
-    <ChakraProvider theme={theme} >
+    <ThemeProvider theme={theme} >
       <motion.div 
       variants={animateWhenInview}
       initial="initial"
@@ -59,7 +61,7 @@ function App() {
         <Contact/>
       </motion.div>  
         
-    </ChakraProvider>
+    </ThemeProvider>
     
   );
 }
